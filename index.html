@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container {
+  max-width: 650px;
+  min-width: 425px;
+  margin: 0 auto;
+  padding: 0px;
+  display: grid;
+  grid-gap: 0px;
+  
+  grid-template-columns: 250px 200px 200px 200px 30px;
+  grid-template-rows: 75px 75px 100px 75px 100px ;
+  background-color:transparent;
+  color:#4a7885;
+  margin: 8em 10px;
+}
+
+.grid-container > div {
+  
+  text-align: center;
+  padding: 20px 0;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .grid-container > div {
+    font-size: 15px;
+    }
+  body{
+    max-width: 600px;
+    min-width: 320px;
+    margin: 0;
+    padding: 0;
+  }
+  
+}
+
+
+.item1 {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  border: 2px solid #3f26d0;
+  background-color: white;
+  color: #3f26d0;
+  margin: 5px;
+ 
+}
+
+.item2 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  margin: 5px;
+} 
+.item3 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  margin: 5px;
+} 
+.item4 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  margin: 5px;
+}
+.item5 {
+  grid-column-start: 5;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 6;
+}
+div.item1{
+  color: #3f26d0;
+  border: 2px solid #3f26d0;
+}
+div.item2{
+  background-color:#3f26d0;
+  color: white;
+}
+div.item3{
+  background-color:#3f26d0;
+  color: white;
+}
+div.item4{
+  background-color:#3f26d0;
+  color: white;
+}
+div.item5{
+  background-color:#3f26d0;
+}
+div.item6{
+  color: white;
+  /* width: 150px;
+  height: 80px; */
+  /* /* -ms-transform: rotate(90deg); /* IE 9 */
+  transform: rotate(90deg);
+   
+}
+
+
+
+
+ 
+ @keyframes animate {
+    0% {
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+/* application columns */
+
+.item7 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3; 
+} 
+.item11 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  line-height: 1.6;
+}
+.item15 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+.item19 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 5;
+  grid-row-end: 6;
+  line-height: 1.6;
+}
+.item23 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 6;
+  grid-row-end: 7;
+  line-height: 1.6;
+}
+
+/* feasability columns */
+
+.line{
+     height: 25px;
+     min-width: 800px;
+     margin: 0 auto 10px;
+     line-height: 25px;
+     font-size: 14px;
+     color: #fff;
+     padding: 0 0 0 10px;
+     position: relative;
+ }
+
+ .line::before{
+     content: '';
+     width: 100%;
+     position: absolute;
+     left: 0;
+     height: 25px;
+     top: 0;
+     z-index: -2;
+     
+ }
+
+ .line::after{
+     content: '';
+     background: #4a7885;
+     border: 2px solid #3f26d0;
+     height: 25px;
+     transition: 0.8s;
+     display: block;
+     width: 90%;
+     animation: animate 1 5s;
+     position: absolute;
+     top: 0;
+     left: 0;
+     z-index: -1;
+ }
+ .line1::after{
+     max-width: 70%;
+ }
+ .line2::after{
+   max-width: 48.5%;
+ }
+ .line3::after{
+   max-width: 12%;
+ }
+ .line4::after{
+   max-width: 48.5%;
+ }
+ .line5::after{
+   max-width: 12%;
+ }
+ .line6::after{
+   max-width: 8%;
+ }
+ .line7::after{
+   max-width: 23%;
+ }
+ .line8::after{
+   max-width: 17%;
+ }
+.item8  {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  border-right: 3px dotted  #4a7885;
+  margin: 5px;
+  margin-top: -5px;
+}
+
+.item12 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  border-right: 3px dotted #4a7885;
+  margin: 5px;
+  margin-top: -5px;
+}
+.item16 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  border-right: 3px dotted  #4a7885;
+  margin: 5px;
+  margin-top: -5px;
+}
+.item20 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 5;
+  grid-row-end: 6;
+  border-right: 3px dotted #4a7885;
+  margin: 5px;
+  margin-top: -5px;
+}
+.item24 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 6;
+  grid-row-end: 7;
+  border-right: 3px dotted  #4a7885;
+  margin: 5px;
+  margin-top: -5px;
+}
+
+/* pre-clinical columns */
+
+.item9 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  border-right: 3px dotted  #4a7885;
+  margin: 5px;
+  margin-top: -5px;
+}
+.item13 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  border-right: 3px dotted #4a7885;
+  margin: 5px;
+  margin-top: -5px;
+}
+.item17 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  border-right: 3px dotted #4a7885;
+  margin: 5px;
+  margin-top: -5px;
+}
+.item21 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 5;
+  grid-row-end: 6;
+  border-right: 3px dotted  #4a7885;
+  margin: 5px;
+  margin-top: -5px;
+}
+.item25 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 6;
+  grid-row-end: 7;
+  border-right: 3px dotted #4a7885;
+  margin: 5px;
+  margin-top: -5px;
+}
+
+/* clinical columns */
+
+.item10 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  border-right: 3px dotted #4a7885;
+  margin: 5px;
+  margin-top: -5px;
+}
+.item14 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  border-right: 3px dotted  #4a7885;
+  margin: 5px;
+  margin-top: -5px;
+}
+.item18 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  border-right: 3px dotted  #4a7885;
+  margin: 5px;
+  margin-top: -5px;
+}
+.item22 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 5;
+  grid-row-end: 6;
+  border-right: 3px dotted  #4a7885;
+  margin: 5px;
+  margin-top: -5px;
+}
+.item26 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 6;
+  grid-row-end: 7;
+  border-right: 3px dotted  #4a7885;
+  margin: 5px;
+  margin-top: -5px;
+}
+
+/* launch columns  */
+
+.item5{
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 7;
+  width: 50px;
+}
+.item6 {
+  grid-column-start: 5;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  
+}
+
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="item1">APPLICATION</div>
+  <div class="item2">FEASABILITY</div>
+  <div class="item3">PRE-CLINICAL</div>  
+  <div class="item4">CLINICAL</div>
+  <div class="item5"></div>
+  <div class="item6">LAUNCH</div>
+  <div class="item7">Synthetic Graft Carrier</div>  
+  <div class="item8">
+    <div class="line line1"></div>
+  </div>
+  <div class="item9"></div>
+  <div class="item10"></div>  
+  <div class="item11">Allograft Bone Carrier<br>Cartilage Regeneration</div>
+  <div class="item12">
+    <div class="line line2"></div>
+    <div class="line line3"></div>
+  </div>
+  <div class="item13"></div>
+  <div class="item14"></div>
+  <div class="item15">Wound Healing</div>  
+  <div class="item16">
+    <div class="line line4">70%</div>
+  </div>
+  <div class="item17"></div>
+  <div class="item18"></div>
+  <div class="item19">Fat Graft (Breast & Recon)<br>Aesthetic Dermal Filler</div>
+  <div class="item20">
+    <div class="line line5">70%</div>
+    <div class="line line6">70%</div>
+  </div>  
+  <div class="item21"></div>
+  <div class="item22"></div>
+  <div class="item23">Drug Delivery/Carrier<br>Cell Delivery</div>  
+  <div class="item24">
+    <div class="line line7">70%</div>
+    <div class="line line8">70%</div>
+  </div>
+  <div class="item25"></div>
+  <div class="item26"></div>   
+</div>
+</div>
+
+</body>
+</html>
