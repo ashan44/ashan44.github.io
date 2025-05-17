@@ -1,33 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-
-    <title>Company Name</title>
-
-    <!--Support Unicodes-->
-    <meta charset="UTF-8" />
-    <!--Bootstrap for many device screens-->
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Education Consultancy - Study Abroad Services</title>
 
-    <!--Metatags for Search engins-->
-    <meta name="keywords" content="companyName, food, bussinessTypes, productsTypes, servicesTypes" />
-    <meta name="description" content="CompanyInformation page" />
-
-    <!--Favicon-->
-    <link rel="icon" href="images/logo.png">
-
-    <!--linked CSS-->
-    <link href="css/mystyles.css" rel="stylesheet">
-
-    <!-- Bootstrap from CDN -->
-    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>-->
-
-    <!--Bootstrap from downloaded Bootstrap css & js-->
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Professional education consultancy helping students achieve their dreams of studying abroad. Expert guidance in university admissions, visa services, and career planning.">
+    <meta name="keywords" content="education consultancy, study abroad, visa services, university admissions, international education, career guidance, student counseling">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Education Consultancy - Your Gateway to International Education">
+    <meta property="og:description" content="Professional education consultancy helping students achieve their dreams of studying abroad">
+    <meta property="og:image" content="images/logo.png">
+    <meta property="og:url" content="https://ashan44.github.io">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="css/bootstrap.min.css" as="style">
+    <link rel="preload" href="js/bootstrap.bundle.min.js" as="script">
+    
+    <!-- Stylesheets -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <script src="js/bootstrap.bundle.min.js"></script>
-
+    <link href="css/mystyles.css" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Scripts -->
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    
     <style>
         .wallstyle {
             background-color: rgba(0, 0, 0, 0.5);
@@ -36,11 +42,38 @@
             border: 1px solid rgba(255, 255, 255, 0.5);
             border-radius: 20px 15px 50px 15px;
         }
+
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            z-index: 1000;
+        }
     </style>
 
 </head>
 
 <body>
+    <div class="preloader">
+        <div class="spinner-grow text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
     <!--header Section-->
     <!-- <header style="background-color:rgb(209, 240, 250);"> -->
     <header>
@@ -113,52 +146,52 @@
 
             <section1>
 
-                <!-- <h1>Section - I</h1>
-                <h3>carousel</h3>
-                <p></p> -->
-                <div class="container-fluid1">
-                    <div class="carousel slide" data-bs-ride="carousel" id="Y">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#Y" data-bs-slide-to="0" class="active"
-                                arec-current="true" area-lable="slide 1">
-                            </button>
-                            <button type="button" data-bs-target="#Y" data-bs-slide-to="1" class="active"
-                                arec-current="true" area-lable="slide 2">
-                            </button>
-                            <button type="button" data-bs-target="#Y" data-bs-slide-to="2" class="active"
-                                arec-current="true" area-lable="slide 3">
-                            </button>
-
+                <!-- Improved carousel section -->
+                <div class="carousel slide" data-bs-ride="carousel" id="Y">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#Y" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#Y" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#Y" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="5000">
+                            <img src="images/banner.jpg" class="d-block w-100" alt="Study Abroad Opportunities">
+                            <div class="carousel-caption">
+                                <div class="animate-slide-up bg-dark bg-opacity-50 p-4 rounded">
+                                    <h1 class="display-4">Study Abroad</h1>
+                                    <p class="lead">Begin your journey to world-class education</p>
+                                    <a href="#contact" class="btn btn-primary btn-lg">Get Started</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="3000">
-                                <img src="images/banner.jpg" class="d-block w-100" alt="">
-                                <div class="carousel-caption d-none d-sm-block">
-                                    <h1>First Slide</h1>
-                                    <p>Lorem ipsum dolor sit amet.</p>
+                        <div class="carousel-item" data-bs-interval="5000">
+                            <img src="images/banner2sal.jpg" class="d-block w-100" alt="Global Education">
+                            <div class="carousel-caption">
+                                <div class="animate-slide-up bg-dark bg-opacity-50 p-4 rounded">
+                                    <h1 class="display-4">Global Education</h1>
+                                    <p class="lead">Access top universities worldwide</p>
+                                    <a href="#services" class="btn btn-primary btn-lg">Our Services</a>
                                 </div>
                             </div>
-                            <div class="carousel-item" data-bs-interval="3000">
-                                <img src="images/banner2sal.jpg" class="d-block w-100" alt="">
-                                <div class="carousel-caption d-none d-sm-block">
-                                    <h1>Second Slide</h1>
-                                    <p>Lorem ipsum dolor sit amet.</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="3000">
-                                <img src="images/banner3sal.jpg" class="d-block w-100" alt="">
-                                <div class="carousel-caption d-none d-sm-block">
-                                    <h1>Third Slide</h1>
-                                    <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="5000">
+                            <img src="images/banner3sal.jpg" class="d-block w-100" alt="Student Services">
+                            <div class="carousel-caption">
+                                <div class="animate-slide-up bg-dark bg-opacity-50 p-4 rounded">
+                                    <h1 class="display-4">Expert Guidance</h1>
+                                    <p class="lead">Professional support every step of the way</p>
+                                    <a href="#about" class="btn btn-primary btn-lg">Learn More</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <button type="button" class="carousel-control-prev" data-bs-target="#Y" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#Y" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
                     </button>
-                    <button type="button" class="carousel-control-next" data-bs-target="#Y" data-bs-slide="next">
-                        <span class="carousel-control-next-icon"></span>
+                    <button class="carousel-control-next" type="button" data-bs-target="#Y" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
                     </button>
                 </div>
             </section1>
@@ -167,46 +200,144 @@
             <!--<section style="background-color:lightgreen;">-->
             <section>
 
-                <!-- <h1>Section - II</h1>
-                <h3>About Me</h3>
-                <img src="myphoto.jpg" alt="My photo">
-                <p></p> -->
-                <div class="con-abt container pb-5" id="about">
-                    <div class="row"></div>
-                    <div class="col-md-12">
-                        <div class="text-center mt-5">
-                            <h1>Welcome to <span class="text-danger">Company</span></h1>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa distinctio, maxime
-                                obcaecati alias temporibus quod, iusto placeat accusamus soluta perferendis doloribus,
-                                sit sequi repellendus consectetur amet architecto officia fugiat tenetur.</p>
-                            <hr>
+                <!-- About Section -->
+                <div class="container py-5" id="about">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="text-center mb-5">
+                                <h1>Who We <span class="text-primary">Are</span></h1>
+                                <p class="lead">Empowering Dreams Through Global Education Since 2010</p>
+                                <hr class="w-25 mx-auto">
+                            </div>
                         </div>
                     </div>
 
-
-                    <div class="row">
-                        <div class="col-sm-12 col-md-4">
-                            <div class="bg-light p-2">
-                                <img src="images/India1.jpg" class="img-fluid mx-auto d-block" alt="image">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-6 animate-slide-up">
+                            <div class="position-relative">
+                                <img src="images/about-us.jpg" class="img-fluid rounded shadow" alt="About Us Image">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-10 rounded"></div>
+                                <div class="position-absolute bottom-0 start-0 bg-primary text-white p-3 rounded-bottom">
+                                    <h5 class="mb-0">13+ Years of Excellence</h5>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-sm-12 col-md-8">
-                            <div class="bg-light p-2">
-                                <h4>About Us</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum consequuntur
-                                    blanditiis ducimus autem voluptas nostrum quo, cupiditate delectus quis minus magni
-                                    quaerat facere maiores id dicta distinctio porro corporis optio quidem odit culpa
-                                    ipsam. Fugit dolore odio tempora ipsum error nam numquam sapiente dolorem velit id
-                                    nesciunt dicta, alias sequi animi cum in aspernatur reprehenderit fugiat assumenda,
-                                    harum praesentium a maxime expedita! Cum inventore ducimus itaque dolorem voluptatem
-                                    minima, reprehenderit praesentium ipsa eaque laboriosam sequi!</p>
+                        
+                        <div class="col-lg-6 animate-slide-up" style="animation-delay: 0.2s">
+                            <div class="ps-lg-4">
+                                <h2 class="mb-4">Transforming Education Dreams into Reality</h2>
+                                <p class="mb-4">With over 13 years of expertise in international education consultancy, we've been the catalyst for thousands of successful academic journeys worldwide. Our commitment goes beyond just consulting – we're your partners in building a global future.</p>
+                                
+                                <div class="row g-4 mb-4">
+                                    <div class="col-sm-6">
+                                        <div class="d-flex align-items-center">
+                                            <div class="service-icon me-3">
+                                                <i class="fas fa-user-graduate text-primary"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="mb-0">Personalized Guidance</h5>
+                                                <p class="mb-0">Tailored to your needs</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="d-flex align-items-center">
+                                            <div class="service-icon me-3">
+                                                <i class="fas fa-chart-line text-primary"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="mb-0">98% Success Rate</h5>
+                                                <p class="mb-0">Proven track record</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row g-4 mb-4">
+                                    <div class="col-sm-6">
+                                        <div class="d-flex align-items-center">
+                                            <div class="service-icon me-3">
+                                                <i class="fas fa-globe text-primary"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="mb-0">Global Network</h5>
+                                                <p class="mb-0">200+ universities</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="d-flex align-items-center">
+                                            <div class="service-icon me-3">
+                                                <i class="fas fa-headset text-primary"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="mb-0">24/7 Support</h5>
+                                                <p class="mb-0">Always here for you</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4">
+                                    <a href="#contact" class="btn btn-primary me-3">Get Free Consultation</a>
+                                    <a href="#services" class="btn btn-outline-primary">Our Services</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-5 pt-5 g-4 text-center">
+                        <div class="col-lg-3 col-sm-6 animate-slide-up">
+                            <div class="counter-item">
+                                <div class="service-icon mb-3">
+                                    <i class="fas fa-user-graduate"></i>
+                                </div>
+                                <h2 class="counter">5000+</h2>
+                                <p>Success Stories</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 animate-slide-up" style="animation-delay: 0.2s">
+                            <div class="counter-item">
+                                <div class="service-icon mb-3">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <h2 class="counter">200+</h2>
+                                <p>Partner Universities</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 animate-slide-up" style="animation-delay: 0.4s">
+                            <div class="counter-item">
+                                <div class="service-icon mb-3">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <h2 class="counter">15+</h2>
+                                <p>Countries Covered</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 animate-slide-up" style="animation-delay: 0.6s">
+                            <div class="counter-item">
+                                <div class="service-icon mb-3">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <h2 class="counter">98%</h2>
+                                <p>Success Rate</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="container-fluid text-center bg-dark text-danger p-3">
-                    <div class="col-md-12">
-                        <h1>100% QUALITY SERVICES</h1>
+
+                <!-- Quality Banner -->
+                <div class="bg-primary py-5 my-5">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-8 text-white">
+                                <h2 class="mb-2">Transform Your Future with Us</h2>
+                                <p class="lead mb-0">Book your free consultation today and take the first step towards global education</p>
+                            </div>
+                            <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                                <a href="#contact" class="btn btn-light btn-lg">Schedule Consultation</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -215,172 +346,114 @@
             <!-- <section style="background-color:rgb(240, 234, 143);"> -->
             <section>
 
-                <!-- <h1>Section - III</h1>
-                <h3>Services</h3>
-                <ul>
-                    <li><a href="#">service 1</a></li>
-                    <li><a href="#">service 2</a></li>
-                    <li><a href="#">service 3</a></li>
-                </ul> -->
+                <!-- Services section -->
                 <div class="container p-5" id="services">
-                    <div class="row"></div>
-                    <div class="col-md-12">
-                        <div class=" mt-5">
-                            <h1 class="text-center">Company <span class="text-danger">Services</span></h1>
-                            <hr>
-                            <ul>
-                                <li>Personalized consultation in selecting a study program that helps you to have a
-                                    steady
-                                    and balanced life-style in your desired career path according to your financial
-                                    capability.
-                                </li>
-                                <li>Assist you in obtaining scholarships / study offers from esteemed universities
-                                    and
-                                    colleges in your chosen country of destination.</li>
-                                <li>All study related documentation from pre-application to visa granting and
-                                    departure. In
-                                    addition, we assist you with airport pickup and accommodation in the country of
-                                    study.
-                                </li>
-                                <li>Consulting you to have a full understanding of all requirements with related to
-                                    visa
-                                    obtaining procedure.</li>
-                                <li>Visa documentation and e-visa application procedure.</li>
-                                <li>Guiding you on visa submission related interviews.</li>
-                                <li>Assist you with spouse / family visa preparation and submission.</li>
-                            </ul>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mt-5 text-center">
+                                <h1>Our <span class="text-primary">Services</span></h1>
+                                <p class="lead">We provide comprehensive support for your international education journey</p>
+                                <hr class="w-25 mx-auto">
+                            </div>
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="mt-5">
-                                <div class="row">
-                                    <div class="col-sm-9 col-lg-9">
-                                        <h4>Packages</h4>
-
-                                        <!--Bootstrap card-->
-                                        <div class="row row-cols-1 row-cols-md-3 g-3">
-                                            <div class="col">
-                                                <div class="card h-100">
-                                                    <img src="images/Swissterland1.jpg" class="card-img-top" alt="...">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Card title</h5>
-                                                        <p class="card-text">This is a wider card with supporting text
-                                                            below as a natural lead-in to additional content. This
-                                                            content is a little bit longer.</p>
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <small class="text-body-secondary">Last updated 3 mins
-                                                            ago</small>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col">
-                                                <div class="card h-100">
-                                                    <img src="images/Malta1.jpg" class="card-img-top" alt="...">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Card title</h5>
-                                                        <p class="card-text">This card has supporting text below as a
-                                                            natural lead-in to additional content.</p>
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <small class="text-body-secondary">Last updated 3 mins
-                                                            ago</small>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col">
-                                                <div class="card h-100">
-                                                    <img src="images/Germany1.jpg" class="card-img-top" alt="...">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Card title</h5>
-                                                        <p class="card-text">This is a wider card with supporting text
-                                                            below as a natural lead-in to additional content. This card
-                                                            has even longer content than the first to show that equal
-                                                            height action.</p>
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <small class="text-body-secondary">Last updated 3 mins
-                                                            ago</small>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                    <div class="row g-4 py-5">
+                        <div class="col-md-4 animate-slide-up">
+                            <div class="card h-100 shadow-sm hover-card">
+                                <div class="card-body text-center">
+                                    <div class="service-icon mb-4">
+                                        <i class="fas fa-graduation-cap"></i>
                                     </div>
-
-
-                                    <div class="col-sm-3 col-lg-3">
-
-                                        <h4>Calculation</h4>
-
-                                        <!--Button-->
-
-                                        <button type="button" class="btn btn-outline-success">Calculater</button>
-                                        <hr>
-
-                                        <!--Button Group-->
-                                        <h6>Button Group</h6>
-                                        <div class="btn-group mb-1" role="group"
-                                            aria-label="Basic mixed styles example">
-                                            <button type="button" class="btn btn-danger">Left</button>
-                                            <button type="button" class="btn btn-warning">Middle</button>
-                                            <button type="button" class="btn btn-success">Right</button>
-                                        </div>
-                                        <hr>
-
-                                        <!--Alert-->
-                                        <h6>Alert</h6>
-                                        <div class="alert alert-primary mb-1" role="alert">
-                                            A simple alert—check it out!
-                                        </div>
-                                        <hr>
-
-                                        <!--Badge-->
-                                        <h6>Badge</h6>
-                                        <h5>Example heading <span class="badge bg-danger"
-                                                style="color: aqua;">New</span></h5>
-                                        <hr>
-
-                                        <!-- Button trigger modal -->
-                                        <h6>Model</h6>
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                            data-bs-target="#exampleModal">
-                                            Launch demo modal
-                                        </button>
-
-                                        <!-- Modal -->
-                                        <div class="modal fade" id="exampleModal" tabindex="-1"
-                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title
-                                                        </h1>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                            aria-label="Close"></button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
-                                                            velit?</p>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary"
-                                                            data-bs-dismiss="modal">Close</button>
-                                                        <button type="button" class="btn btn-primary">Save
-                                                            changes</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-
-
-
-                                    </div>
-
+                                    <h4 class="card-title">Education Consulting</h4>
+                                    <p class="card-text">Personalized consultation to help you choose the perfect study program aligned with your career goals and budget.</p>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-check text-success"></i> Program Selection</li>
+                                        <li><i class="fas fa-check text-success"></i> University Admission</li>
+                                        <li><i class="fas fa-check text-success"></i> Career Guidance</li>
+                                    </ul>
                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 animate-slide-up" style="animation-delay: 0.2s">
+                            <div class="card h-100 shadow-sm hover-card">
+                                <div class="card-body text-center">
+                                    <div class="service-icon mb-4">
+                                        <i class="fas fa-passport"></i>
+                                    </div>
+                                    <h4 class="card-title">Visa Services</h4>
+                                    <p class="card-text">Complete visa application support from documentation to interview preparation.</p>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-check text-success"></i> Documentation</li>
+                                        <li><i class="fas fa-check text-success"></i> Interview Coaching</li>
+                                        <li><i class="fas fa-check text-success"></i> Application Processing</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 animate-slide-up" style="animation-delay: 0.4s">
+                            <div class="card h-100 shadow-sm hover-card">
+                                <div class="card-body text-center">
+                                    <div class="service-icon mb-4">
+                                        <i class="fas fa-plane-departure"></i>
+                                    </div>
+                                    <h4 class="card-title">Travel Support</h4>
+                                    <p class="card-text">Comprehensive travel and settlement assistance for a smooth transition abroad.</p>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-check text-success"></i> Airport Pickup</li>
+                                        <li><i class="fas fa-check text-success"></i> Accommodation</li>
+                                        <li><i class="fas fa-check text-success"></i> Local Guidance</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-5">
+                        <div class="col-md-12 text-center">
+                            <h2>Why Choose Us?</h2>
+                            <p class="lead mb-5">Experience the difference with our expert services</p>
+                        </div>
+                        
+                        <div class="col-md-3 col-sm-6 mb-4 animate-slide-up">
+                            <div class="text-center">
+                                <div class="service-icon mb-3">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h5>Expert Team</h5>
+                                <p>Dedicated professionals with years of experience</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-sm-6 mb-4 animate-slide-up" style="animation-delay: 0.2s">
+                            <div class="text-center">
+                                <div class="service-icon mb-3">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <h5>24/7 Support</h5>
+                                <p>Round-the-clock assistance for all your needs</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-sm-6 mb-4 animate-slide-up" style="animation-delay: 0.4s">
+                            <div class="text-center">
+                                <div class="service-icon mb-3">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h5>High Success Rate</h5>
+                                <p>Proven track record of successful applications</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-sm-6 mb-4 animate-slide-up" style="animation-delay: 0.6s">
+                            <div class="text-center">
+                                <div class="service-icon mb-3">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <h5>Trusted Partners</h5>
+                                <p>Strong relationships with top institutions</p>
                             </div>
                         </div>
                     </div>
@@ -391,121 +464,99 @@
             <!-- <section style="background-color:rgb(161, 251, 123)"> -->
             <section>
 
-                <!-- <h1>Section - V</h1>
-                <h3>Partners</h3>
-                <p></p>-->
-                <div class="section text-white pb-5"
-                    style="background-image: linear-gradient(rgba(0, 0, 0, 0.827),rgba(0, 0, 0, 0.8)) , url(images/banner2sal.jpg);">
-
-                    <div class="container p-5" id="partners">
-                        <div class="row"></div>
-                        <div class="col-md-12">
-                            <div class="text-center mt-5">
-                                <h1>Our <span class="text-danger">Partners</span></h1>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa distinctio, maxime
-                                    obcaecati alias temporibus quod, iusto placeat accusamus soluta perferendis
-                                    doloribus,
-                                    sit sequi repellendus consectetur amet architecto officia fugiat tenetur.</p>
-                                <hr>
+                <!-- Partners Section -->
+                <div class="section py-5" id="partners" style="background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(images/banner2sal.jpg); background-attachment: fixed;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="text-center mb-5">
+                                    <h1 class="text-white">Our <span class="text-primary">Partners</span></h1>
+                                    <p class="lead text-white">Partnering with leading universities worldwide to provide quality education</p>
+                                    <hr class="w-25 mx-auto">
+                                </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                                <div class="wallstyle">
-                                    <h3>Australia</h3>
-                                    <img src="images/Australia1.jpg" class="img-fluid mx-auto d-block">
-                                    <p class="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                        Ullam ex, molestias optio
-                                        dolore
-                                        illum
-                                        provident voluptatem eum ipsam vel fuga iste, sed vero magnam neque aut nihil
-                                        odit
-                                        culpa
-                                        aliquam.
-                                    </p>
+
+                        <div class="row g-4">
+                            <div class="col-lg-2 col-md-4 col-sm-6 animate-slide-up">
+                                <div class="partner-card bg-white p-3 rounded shadow-sm text-center h-100">
+                                    <h4 class="h5 mb-3">Australia</h4>
+                                    <img src="images/Australia1.jpg" class="img-fluid rounded mb-3" alt="Australian Universities">
+                                    <p class="small mb-0">Top-ranked universities offering world-class education and research opportunities.</p>
                                 </div>
                             </div>
 
-                            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                                <div class="wallstyle">
-                                    <h3>USA</h3>
-                                    <img src="images/USA1.jpg" class="img-fluid mx-auto d-block">
-                                    <p class="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                        Ullam ex, molestias optio
-                                        dolore
-                                        illum
-                                        provident voluptatem eum ipsam vel fuga iste, sed vero magnam neque aut nihil
-                                        odit
-                                        culpa
-                                        aliquam.
-                                    </p>
+                            <div class="col-lg-2 col-md-4 col-sm-6 animate-slide-up" style="animation-delay: 0.2s">
+                                <div class="partner-card bg-white p-3 rounded shadow-sm text-center h-100">
+                                    <h4 class="h5 mb-3">USA</h4>
+                                    <img src="images/USA1.jpg" class="img-fluid rounded mb-3" alt="USA Universities">
+                                    <p class="small mb-0">Leading American institutions known for innovation and academic excellence.</p>
                                 </div>
                             </div>
 
-                            <div class="col-12  col-sm-6 col-md-4 col-lg-2">
-                                <div class="wallstyle">
-                                    <h3>Canada</h3>
-                                    <img src="images/Canada1.jpg" class="img-fluid mx-auto d-block">
-                                    <p class="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                        Ullam ex, molestias optio
-                                        dolore
-                                        illum
-                                        provident voluptatem eum ipsam vel fuga iste, sed vero magnam neque aut nihil
-                                        odit
-                                        culpa
-                                        aliquam.
-                                    </p>
+                            <div class="col-lg-2 col-md-4 col-sm-6 animate-slide-up" style="animation-delay: 0.3s">
+                                <div class="partner-card bg-white p-3 rounded shadow-sm text-center h-100">
+                                    <h4 class="h5 mb-3">Canada</h4>
+                                    <img src="images/Canada1.jpg" class="img-fluid rounded mb-3" alt="Canadian Universities">
+                                    <p class="small mb-0">Quality education with excellent post-study work opportunities.</p>
                                 </div>
                             </div>
 
-                            <div class="col-12  col-sm-6 col-md-4 col-lg-2">
-                                <div class="wallstyle">
-                                    <h3>India</h3>
-                                    <img src="images/India1.jpg" class="img-fluid mx-auto d-block">
-                                    <p class="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                        Ullam ex, molestias optio
-                                        dolore
-                                        illum
-                                        provident voluptatem eum ipsam vel fuga iste, sed vero magnam neque aut nihil
-                                        odit
-                                        culpa
-                                        aliquam.
-                                    </p>
+                            <div class="col-lg-2 col-md-4 col-sm-6 animate-slide-up" style="animation-delay: 0.4s">
+                                <div class="partner-card bg-white p-3 rounded shadow-sm text-center h-100">
+                                    <h4 class="h5 mb-3">India</h4>
+                                    <img src="images/India1.jpg" class="img-fluid rounded mb-3" alt="Indian Universities">
+                                    <p class="small mb-0">Premier institutions offering diverse programs at competitive costs.</p>
                                 </div>
                             </div>
 
-                            <div class="col-12  col-sm-6 col-md-4 col-lg-2">
-                                <div class="wallstyle">
-                                    <h3>France</h3>
-                                    <img src="images/France1.jpg" class="img-fluid mx-auto d-block">
-                                    <p class="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                        Ullam ex, molestias optio
-                                        dolore
-                                        illum
-                                        provident voluptatem eum ipsam vel fuga iste, sed vero magnam neque aut nihil
-                                        odit
-                                        culpa
-                                        aliquam.
-                                    </p>
+                            <div class="col-lg-2 col-md-4 col-sm-6 animate-slide-up" style="animation-delay: 0.5s">
+                                <div class="partner-card bg-white p-3 rounded shadow-sm text-center h-100">
+                                    <h4 class="h5 mb-3">France</h4>
+                                    <img src="images/France1.jpg" class="img-fluid rounded mb-3" alt="French Universities">
+                                    <p class="small mb-0">Excellence in arts, culture, and innovative research programs.</p>
                                 </div>
                             </div>
 
-                            <div class="col-12  col-sm-6 col-md-4 col-lg-2">
-                                <div class="wallstyle">
-                                    <h3>Finland</h3>
-                                    <img src="images/Finland1.jpg" class="img-fluid mx-auto d-block">
-                                    <p class="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                        Ullam ex, molestias optio
-                                        dolore
-                                        illum
-                                        provident voluptatem eum ipsam vel fuga iste, sed vero magnam neque aut nihil
-                                        odit
-                                        culpa
-                                        aliquam.
-                                    </p>
+                            <div class="col-lg-2 col-md-4 col-sm-6 animate-slide-up" style="animation-delay: 0.6s">
+                                <div class="partner-card bg-white p-3 rounded shadow-sm text-center h-100">
+                                    <h4 class="h5 mb-3">Finland</h4>
+                                    <img src="images/Finland1.jpg" class="img-fluid rounded mb-3" alt="Finnish Universities">
+                                    <p class="small mb-0">High-quality education with focus on technology and innovation.</p>
                                 </div>
                             </div>
+                        </div>
 
+                        <!-- Partner Statistics -->
+                        <div class="row mt-5 pt-5 text-white text-center g-4">
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="partner-stat animate-slide-up">
+                                    <i class="fas fa-university fa-3x mb-3 text-primary"></i>
+                                    <h2 class="counter">200+</h2>
+                                    <p>Partner Universities</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="partner-stat animate-slide-up" style="animation-delay: 0.2s">
+                                    <i class="fas fa-globe-americas fa-3x mb-3 text-primary"></i>
+                                    <h2 class="counter">15+</h2>
+                                    <p>Countries</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="partner-stat animate-slide-up" style="animation-delay: 0.4s">
+                                    <i class="fas fa-graduation-cap fa-3x mb-3 text-primary"></i>
+                                    <h2 class="counter">5000+</h2>
+                                    <p>Programs Available</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="partner-stat animate-slide-up" style="animation-delay: 0.6s">
+                                    <i class="fas fa-award fa-3x mb-3 text-primary"></i>
+                                    <h2 class="counter">50+</h2>
+                                    <p>Years Combined Experience</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -515,107 +566,167 @@
             <!-- <section style="background-color:rgb(123, 166, 251)"> -->
             <section>
 
-
+                <!-- Contact section with improved form -->
                 <div class="container p-5" id="contact">
-                    <div class="row"></div>
-                    <div class="col-md-12">
-                        <div class=" mt-5">
-                            <h1 class="text-center">Contact <span class="text-danger">Company</span></h1>
-
-                            <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente a,
-                                eum provident magni ab tenetur, temporibus in dignissimos, delectus nihil nesciunt
-                                asperiores est alias quos quam. Fugiat, nisi omnis? Vel?</p>
-                            <hr>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mt-5">
+                                <h1 class="text-center">Contact <span class="text-primary">Us</span></h1>
+                                <p class="lead text-center">Get in touch with us for expert guidance on your study abroad journey</p>
+                                <hr class="w-25 mx-auto mb-5">
+                            </div>
                         </div>
-
                     </div>
 
-
-                    <div class="row">
-
-                        <div class="col-sm-6 ">
-                            <div class="footer-content">
-                                <p class="large"></p>
-                                <ul class="list-icons">
-
-                                    <li><i class="fa fa-fax pr-10"></i> +94 112 222 333</li>
-                                    <li><i class="fa fa-fax pr-10"></i> <a> +94 777 888 999 </a></li>
-                                    <li><i class="fa fa-fax pr-10"></i> <a>Whatsapp/Imo/Viber +94 777 888 999 </a> </li>
-                                    whatsapp imo and viber
-                                    <li><i class="fa fa-envelope-o pr-10"></i> infocompany@gmail.com</li>
-                                    <li><img src="images/logo.png" class="fa  pr-10">S.M.Jayathilake </br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No. 100, Peoples Park, Shopping Complex,
-                                        <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sribodhiraja Mawatha, Colombo 11
+                    <div class="row g-4">
+                        <div class="col-lg-6 mb-4">
+                            <div class="contact-info bg-light p-4 rounded shadow-sm">
+                                <h3 class="mb-4">Get In Touch</h3>
+                                <ul class="list-unstyled">
+                                    <li class="mb-3">
+                                        <i class="fas fa-phone text-primary me-2"></i>
+                                        <a href="tel:+94112222333" class="text-dark text-decoration-none">+94 112 222 333</a>
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="fas fa-mobile-alt text-primary me-2"></i>
+                                        <a href="tel:+94777888999" class="text-dark text-decoration-none">+94 777 888 999</a>
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="fab fa-whatsapp text-primary me-2"></i>
+                                        <a href="https://wa.me/94777888999" target="_blank" class="text-dark text-decoration-none">
+                                            WhatsApp/IMO/Viber: +94 777 888 999
+                                        </a>
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="fas fa-envelope text-primary me-2"></i>
+                                        <a href="mailto:infocompany@gmail.com" class="text-dark text-decoration-none">infocompany@gmail.com</a>
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="fas fa-map-marker-alt text-primary me-2"></i>
+                                        <span>123 Main Street, Colombo, Sri Lanka</span>
                                     </li>
                                 </ul>
-
+                                
+                                <div class="social-links mt-4">
+                                    <h4 class="mb-3">Follow Us</h4>
+                                    <a href="#" class="btn btn-outline-primary me-2"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" class="btn btn-outline-primary me-2"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="btn btn-outline-primary me-2"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" class="btn btn-outline-primary"><i class="fab fa-instagram"></i></a>
+                                </div>
                             </div>
-
                         </div>
-                        <div class="col-sm-6 ">
-                            <div class="footer-content">
-                                <form role="form" id="footer-form" action="mail-it.php" method="post">
-                                    <div class="form-group has-feedback mb-3">
-                                        <label class="sr-only" for="name2">Name</label>
-                                        <input type="text" class="form-control" id="name2" placeholder="Name"
-                                            name="name2" required>
-                                        <i class="fa fa-user form-control-feedback"></i>
 
+                        <div class="col-lg-6">
+                            <div class="contact-form bg-light p-4 rounded shadow-sm">
+                                <h3 class="mb-4">Send Message</h3>
+                                <form id="footer-form" action="mail-it.php" method="post" novalidate>
+                                    <div class="form-group mb-3">
+                                        <label for="name2" class="form-label">Full Name</label>
+                                        <input type="text" class="form-control" id="name2" name="name2" 
+                                               placeholder="Enter your full name" required>
+                                        <div class="invalid-feedback">Please enter your name</div>
                                     </div>
-                                    <div class="form-group has-feedback mb-3">
-                                        <label class="sr-only" for="email2">Email address</label>
-                                        <input type="email" class="form-control" id="email2" placeholder="Enter email"
-                                            name="email2" required>
-                                        <i class="fa fa-envelope form-control-feedback"></i>
+                                    
+                                    <div class="form-group mb-3">
+                                        <label for="email2" class="form-label">Email Address</label>
+                                        <input type="email" class="form-control" id="email2" name="email2" 
+                                               placeholder="Enter your email" required>
+                                        <div class="invalid-feedback">Please enter a valid email address</div>
                                     </div>
-                                    <div class="form-group has-feedback mb-3">
-                                        <label class="sr-only" for="message2">Message</label>
-                                        <textarea class="form-control" rows="5" id="message2" placeholder="Message"
-                                            name="message2" required></textarea>
-                                        <i class="fa fa-pencil form-control-feedback"></i>
+                                    
+                                    <div class="form-group mb-3">
+                                        <label for="subject2" class="form-label">Subject</label>
+                                        <input type="text" class="form-control" id="subject2" name="subject2" 
+                                               placeholder="Enter subject" required>
+                                        <div class="invalid-feedback">Please enter a subject</div>
                                     </div>
-                                    <input type="submit" value="Send" class="btn btn-primary">
+                                    
+                                    <div class="form-group mb-3">
+                                        <label for="message2" class="form-label">Message</label>
+                                        <textarea class="form-control" id="message2" name="message2" rows="5" 
+                                                  placeholder="Enter your message" required></textarea>
+                                        <div class="invalid-feedback">Please enter your message</div>
+                                    </div>
+                                    
+                                    <button type="submit" class="btn btn-primary w-100">
+                                        <i class="fas fa-paper-plane me-2"></i>Send Message
+                                    </button>
                                 </form>
                             </div>
                         </div>
                     </div>
-
-
-
-
-
-
-
-
                 </div>
-
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-
-
             </section>
 
         </main>
 
-        <!-- Footer Section-->
-        <!-- <footer style="background-color: darkgrey;"> -->
-        <footer>
-            <div class="footer">
-                <div class="container-fluid  text-center text-white bg-dark p-5">
-
-                    <h4>Company</h4>
-                    <p>Copyright © 2023 Company.lk || Design by <a href="https://www.srilionssoftware.com/"
-                            target="blank">Sri Lions
-                            Software</a></p>
-
+        <!-- Footer Section -->
+        <footer class="bg-dark text-white pt-5 pb-3">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6 animate-slide-up">
+                        <h4 class="mb-4">About Company</h4>
+                        <p class="mb-4">Your trusted partner in international education, helping students achieve their dreams of studying abroad since 2010.</p>
+                        <div class="social-links">
+                            <a href="#" class="btn btn-outline-light btn-sm me-2"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="btn btn-outline-light btn-sm me-2"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="btn btn-outline-light btn-sm me-2"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="btn btn-outline-light btn-sm"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6 animate-slide-up" style="animation-delay: 0.2s">
+                        <h4 class="mb-4">Quick Links</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#" class="text-white text-decoration-none"><i class="fas fa-chevron-right me-2"></i>Home</a></li>
+                            <li class="mb-2"><a href="#about" class="text-white text-decoration-none"><i class="fas fa-chevron-right me-2"></i>About Us</a></li>
+                            <li class="mb-2"><a href="#services" class="text-white text-decoration-none"><i class="fas fa-chevron-right me-2"></i>Our Services</a></li>
+                            <li class="mb-2"><a href="#partners" class="text-white text-decoration-none"><i class="fas fa-chevron-right me-2"></i>Our Partners</a></li>
+                            <li class="mb-2"><a href="#contact" class="text-white text-decoration-none"><i class="fas fa-chevron-right me-2"></i>Contact Us</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6 animate-slide-up" style="animation-delay: 0.4s">
+                        <h4 class="mb-4">Our Services</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Education Consulting</li>
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Visa Processing</li>
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Study Abroad Programs</li>
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Career Counseling</li>
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Travel Assistance</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6 animate-slide-up" style="animation-delay: 0.6s">
+                        <h4 class="mb-4">Contact Info</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>123 Main Street, Colombo, Sri Lanka</li>
+                            <li class="mb-2"><i class="fas fa-phone me-2"></i>+94 112 222 333</li>
+                            <li class="mb-2"><i class="fas fa-envelope me-2"></i>infocompany@gmail.com</li>
+                            <li class="mb-2"><i class="fas fa-clock me-2"></i>Mon - Fri: 9:00 AM - 6:00 PM</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <hr class="mt-4 mb-3">
+                
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="mb-md-0">© 2023 Company.lk. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <p class="mb-0">Designed by <a href="https://www.srilionssoftware.com/" target="_blank" class="text-white text-decoration-none">Sri Lions Software</a></p>
+                    </div>
                 </div>
             </div>
         </footer>
 
+    <button class="btn btn-primary back-to-top" title="Back to top">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
 </body>
 
 </html>
